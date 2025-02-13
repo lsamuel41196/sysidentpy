@@ -6,6 +6,7 @@ from ._bilinear import Bilinear
 from ._laguerre import Laguerre
 from ._hermite import Hermite
 from ._hermite_normalized import HermiteNormalized
+from ._custom import Custom
 
 __all__ = [
     "Bersntein",
@@ -16,4 +17,5 @@ __all__ = [
     "Hermite",
     "HermiteNormalized",
     "Polynomial",
+    "Custom"
 ]
