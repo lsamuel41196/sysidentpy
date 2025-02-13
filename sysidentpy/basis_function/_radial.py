@@ -1,4 +1,4 @@
-"""Custom Basis Function for NORMAX Models."""
+"""Radial Basis Function for NORMAX Models."""
 
 from typing import Optional
 import numpy as np
@@ -6,16 +6,19 @@ import numpy as np
 from .basis_function_base import BaseBasisFunction
 
 
-class Custom(BaseBasisFunction):
+class Radial(BaseBasisFunction):
 
     def __init__(
         self,
-        degree: int = 2,
-        function: str = "" #define which function i.e sin, cos, log, exp, etc.
-
+        center: float = 0.0,    #center point of radial basis function
+        width: float = 0.0,     #width of radial basis function
+        dimensions: int = 1     #dimensions
+        
     ):
-        self.degree = degree
-        self.function = function
+        self.center = center
+        self.width = width
+        self.dimensions = dimensions
+
 
     def fit(
         self,
